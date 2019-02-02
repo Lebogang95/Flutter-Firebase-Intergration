@@ -1,4 +1,4 @@
-# flutter_firebase_intergration
+# Flutter Firebase intergration using MVP to keep it clean
 
 A Flutter application which demonstrates how to use Firebase features in Flutter
 
