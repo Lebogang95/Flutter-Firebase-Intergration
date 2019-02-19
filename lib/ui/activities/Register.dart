@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_firebase_intergration/ui/activities/Login.dart';
+import 'package:flutter_firebase_intergration/ui/activities/Verification.dart';
 import 'package:flutter_firebase_intergration/ui/custom_widgets/app_text.dart';
 import 'package:flutter_firebase_intergration/utils/gradient_backdrop_1.dart';
 
@@ -128,7 +129,23 @@ class _RegisterPageState extends State<RegisterPage> {
                 textAlign: TextAlign.center,
                 style: new TextStyle(fontFamily: 'DroidSansChinese', color:  Colors.white, fontSize: 16),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(pageBuilder: (context, animation1, animation2) {
+                    return VerificationPage();
+                  },
+
+                    transitionsBuilder: (context, animation1, animation2, child) {
+                      return FadeTransition(
+                        opacity: animation1,
+                        child: child,
+                      );
+                    },
+                    transitionDuration: Duration(milliseconds: 500),
+                  ),
+                );
+              },
               shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(30.0)
               )
@@ -166,7 +183,7 @@ class _RegisterPageState extends State<RegisterPage> {
         children: <Widget>[
 
           GradientBackdrop_1(hexColor_1: Colors.black12, hexColor_2: Colors.black87, imagePath: 'images/backdrop_green.jpg',),
-          
+
           new Center(
             child: SingleChildScrollView(
               child: Column(
