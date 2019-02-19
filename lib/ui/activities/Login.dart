@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_firebase_intergration/ui/activities/Register.dart';
 import 'package:flutter_firebase_intergration/ui/custom_widgets/app_text.dart';
 import 'package:flutter_firebase_intergration/utils/gradient_backdrop_1.dart';
 
@@ -122,7 +123,25 @@ class _LoginPageState extends State<LoginPage> {
       child: AppText(
           label: 'Dont have an account ? Sign Up', size: 16.0
       ),
-      onPressed: (){},
+      onPressed: (){
+
+        Navigator.push(
+          context,
+          PageRouteBuilder(pageBuilder: (context, animation1, animation2) {
+            return RegisterPage();
+          },
+
+          transitionsBuilder: (context, animation1, animation2, child) {
+            return FadeTransition(
+              opacity: animation1,
+              child: child,
+            );
+          },
+
+          transitionDuration: Duration(milliseconds: 500),
+        ),
+        );
+      },
     );
 
     return Scaffold(
@@ -131,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
         children: <Widget>[
 
 
-          GradientBackdrop_1(hexColor_1: Colors.black12, hexColor_2: Colors.black87, imagePath: 'images/demo_image_1.jpg',),
+          GradientBackdrop_1(hexColor_1: Colors.black12, hexColor_2: Colors.black87, imagePath: 'images/backdrop_red.jpg',),
 
 
           new Center(
