@@ -5,6 +5,7 @@ A Flutter application made by Lebogang which demonstrates how to intergrate and 
 <p float="left">
   <img src="https://github.com/Lebogang95/flutter_firebase-intergration/blob/master/images/SC1.jpg" width="200" height="400" />
   <img src="https://github.com/Lebogang95/flutter_firebase-intergration/blob/master/images/SC2.jpg" width="200" height="400" />
+  <img src="https://github.com/Lebogang95/flutter_firebase-intergration/blob/master/images/SC3.jpg" width="200" height="400" />
 </p>
 
 ### To do
